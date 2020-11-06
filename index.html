@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Raspberry-Pi-4-Network-Connection-Issues-Fixed</title>
+</head>
+<body>
+
+	<h1>Raspberry-Pi-4-Network-Connection-Issues-Fixed</h1>
+
+	<p>Hello Everyone!</p>
+
+	<p>Today I will discuss about the common problem that we faced when we want to connect raspberry to a network (Wireless or Wired).<br>
+
+	<b>That means You can connect your pi without a monitor or cable thing!</b> <br>
+
+	There will be lots of videos and documentation about these problems but not with proper solutions!<br>
+
+	<b>Before looking my solutions, I want to make a clear statement that you have to enable your pi ssh and vnc. 
+After that anywhere you go, just with your pi and laptop, you can control your pi through laptop without a monitor or cable.
+</b><br>
+
+Here is my advice for you guys but you need some tools for that !</p>
+
+	<h3>REQUIREMENTS:</h3>
+	<ul>
+	<li>Windows operating system based Laptop or PC</li>    
+    	<li>Wireless router</li>    
+    	<li>Ethernet cable</li>    
+    	<li>Putty + VNC (Download these software)</li>
+    	<li>Raspberry PI with power cable.</li>
+  	</ul>
+  
+	<p><b>For these solution I have used Raspberry Pi 4 (1GB).</b></p>
+
+	<h3>Steps:</h3>
+	<p>
+1. Connect Ethernet cable's one head in Raspberry pi port and other head in the router.<br>
+
+2. Power up the pi source and Check your router main page. (Example: my router is tp-link so my address is 192.168.0.1)<br>
+
+3. Log in your router.<br>
+
+4. There will be a option called DHCP.<br>
+
+5. Here, you will find your host name: raspberry pi with an ip address.<br>
+
+6. Turn on Putty and put that ip address in the gap, port is same 22.<br>
+
+7. It will connect automatically, (If there is an security alert message shown, just click YES)<br></p>
+
+	<h4>Notes: Some cases it wants user name and password. 	</h4>
+  
+	<p><b>So, username is pi and password is raspberry</b><br>	<br>	If you want to change password manually.</p>
+
+	<div>
+	<p>So the first thing to do is change the password. This can be done via the raspi-config application, or from the command line.<br><br>
+
+    sudo raspi-config <br><br>
+
+	Select option 2, and follow the instructions to change the password.<br>
+	In fact, all raspi-config start up the command line passwd application, which you can do from the command line. Simply type in your new password and confirm it.<br><br>
+
+    passwd
+	</p>
+	</div>
+  
+	<p>8. Then open VNC, put the address in that (e.x: mine was 192.168.0.106)<br>
+
+9. It will show your pi environment.</p>
+
+	<p><b>Note:</b>
+
+	Using putty you can do terminal code in pi. It's easy and smooth way to learn pi.</p>
+
+	<h3>How to make a WIRELESS Connection</h3>
+
+	<p>I have seen many were trying terminal and maximum cases, they failed, as there are lots of dependencies. Mine is simple and easy. I hope it will work for all!</p>
+
+	<ul><b>Launch PI terminal (ctrl + alt+ T) </b>
+
+    <li>sudo raspi-config</li>
+    <li>select network option</li>
+    <li>add your wifi name</li>    
+    <li>add your password</li>
+	</ul>
+ <p><b>ENJOY WIRELESS MODE</b></p>
+
+	<h4>Note: Remember! All these things must have to do under wired connections!</h4>
+
+	<h3>IN MY CASE THERE WAS A RESOLUTION ISSUE</h3>
+
+	<p>I fixed that too. For that <b>There are many solutions:
+
+Launch pi terminal. If you use putty you can do there too.</b><br><br>
+  
+    sudo raspi-config<br><br>
+    
+	There will be so many option. For PI-4, click on ADVANCED SETTINGS.<br><br>
+  
+    select resolution<br><br>
+  
+	There will be your desire size, just pick one.<br><br>
+
+Reboot the PI. <b>Problem Solved!</b> </p>
+
+
+	<p>Further details will be uploaded soon.</p>
+
+</body>
+</html>
